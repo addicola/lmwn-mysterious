@@ -5,6 +5,13 @@ import (
 	"fmt"
 )
 
+func reverse(str string) (result string) {
+	for _, v := range str {
+		result = string(v) + result
+	}
+	return
+}
+
 func main() {
 	var whatIsIt string
 
@@ -16,7 +23,7 @@ func main() {
 		panic(err)
 	}
 
-	whatIsIt = string(sd)
+	whatIsIt = reverse(string(sd))
 
 	fmt.Println(whatIsIt)
 }
